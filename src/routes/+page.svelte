@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { FilterableSetsGrid, keyedLocalStorage } from '@flyingcatband/tunebook';
+	import { base } from '$app/paths';
 
 	let { data } = $props();
 	const visualTranspose = keyedLocalStorage('globalTransposition', 0);
@@ -15,4 +16,4 @@
 	<button onclick={() => ($visualTranspose = 2)}>Make the folder B♭</button>
 	<button onclick={() => ($visualTranspose = -3)}>Make the folder E♭</button>
 </p>
-<FilterableSetsGrid folder={data.folder} tuneFont="My Custom Font" />
+<FilterableSetsGrid folder={data.folder} tuneFont="My Custom Font" basePath="{base}/" />
