@@ -23,7 +23,7 @@ export function load({ fetch }: LoadEvent): Promise<{ folder: Folder }> {
             return res.json();
         })
         .then((folder) => {
-            console.log('Fetched folder data:', folder); // Log the fetched data
+            console.log('Fetched folder data:', JSON.stringify(folder, null, 2)); // Log the fetched data
             return { folder };
         })
         .catch((error) => {
