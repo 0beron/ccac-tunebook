@@ -5,7 +5,7 @@ export const prerender = true;
 
 // This is where the site gets the data for your tunes and sets
 export function load({ fetch }: LoadEvent): Promise<{ folder: Folder }> {
-       const basePath = import.meta.env.BASE_PATH || '';
+       const basePath = '/ccas-tunebook'; //import.meta.env.BASE_PATH || '';
 
 // Log the base path to see what it's resolving to
     console.log('BASE_PATH:', basePath);
